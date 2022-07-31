@@ -1,0 +1,44 @@
+<div class="container">
+  <h5>Actualizar Experiencia</h5>
+  <!--  <form (ngSubmit)="onUpdate()" #f="ngForm" novalidate>-->
+   
+<form name="form" (ngSubmit)="onUpdate()" #f="ngForm" novalidate>
+
+	  <div class="form-group">
+      <label for="tituloExp">Nombre:</label>
+      <input class="form-control" type="text" name="tituloExp" id="tituloExp"
+        [(ngModel)]="form.tituloExp" required autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="fechaExp">Fecha:</label>
+      <input class="form-control" type="text" name="fechaExp" id="fechaExp" [(ngModel)]="form.fechaExp" required
+        autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="descExp">Fecha:</label>
+      <input class="form-control" type="text" name="descExp" id="descExp" [(ngModel)]="form.descExp" required
+        autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="imagenExp">Fecha:</label>
+      <input class="form-control" type="text" name="imagenExp" id="imagenExp" [(ngModel)]="form.imagenExp" required
+        autocomplete="off">
+    </div>
+
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-success" [disabled]="!f.valid">Actualizar</button>
+    </div>
+  </form>
+  <div>
+    <button class="btn btn-primary float-left mr-3" (click)="volver()">Volver</button>
+  </div>
+  <br>
+  <br>
+  <div *ngIf="failActualizado" class="float-left">
+    <p class="p-3 bg-danger text-white rounded">Error: {{msjErr}}</p>
+  </div>
+  <div *ngIf="actualizado" class="float-left">
+    <p class="p-3 bg-success text-white rounded">OK: {{msjOK}}</p>
+  </div>
+</div>

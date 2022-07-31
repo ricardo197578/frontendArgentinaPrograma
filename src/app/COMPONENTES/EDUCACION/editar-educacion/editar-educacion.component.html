@@ -1,0 +1,51 @@
+<p>editar-educacion works!</p>
+<div class="container" >
+  <h5>Actualizar Educacion </h5>
+  <!-- <form (ngSubmit)="onUpdate()" #f="ngForm" novalidate>-->
+    
+
+<form name="form" (ngSubmit)="onUpdate()" #f="ngForm" novalidate>
+
+	  <div class="form-group">
+      <label for="tituloEdu">Titulo:</label>
+      <input class="form-control" type="text" name="tituloEdu" id="tituloEdu"
+        [(ngModel)]="form.tituloEdu" required autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="fechaEdu">Fecha Egreso:</label>
+      <input class="form-control" type="text" name="fechaEdu" id="fechaEdu" [(ngModel)]="form.fechaEdu" required
+        autocomplete="off">
+    </div>
+
+     <div class="form-group">
+      <label for="descEdu">Descripcion:</label>
+      <input class="form-control" type="text" name="descEdu" id="descEdu" [(ngModel)]="form.descEdu" required
+        autocomplete="off">
+    </div>
+
+     <div class="form-group">
+      <label for="imagenEdu">Imagen:</label>
+      <input class="form-control" type="text" name="imagenEdu" id="imagenEdu" [(ngModel)]="form.imagenEdu" required
+        autocomplete="off">
+    </div>
+
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-success" [disabled]="!f.valid">Actualizar</button>
+    </div>
+  </form>
+
+
+
+  <div>
+    <button class="btn btn-primary float-left mr-3" (click)="volver()">Volver</button>
+  </div>
+  <br>
+  <br>
+  <div *ngIf="failActualizado" class="float-left">
+    <p class="p-3 bg-danger text-white rounded">Error: {{msjErr}}</p>
+  </div>
+  <div *ngIf="actualizado" class="float-left">
+    <p class="p-3 bg-success text-white rounded">OK: {{msjOK}}</p>
+  </div>
+</div>
