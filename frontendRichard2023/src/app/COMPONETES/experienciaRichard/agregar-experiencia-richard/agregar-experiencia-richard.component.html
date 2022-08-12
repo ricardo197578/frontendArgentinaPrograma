@@ -1,0 +1,22 @@
+<div class="container">
+    <form action="">
+        <label for="empresa">Empresa</label>
+	<input type="text" id="empresa" name="empresa" [(ngModel)]="experienciaRichardNueva.empresa">
+
+	<label for="fechaInicioExp">Fecha Inicio</label>
+	<input type="text" id="fechaInicioExp" name="fechaIncioExp" [(ngModel)]="experienciaRichardNueva.fechaInicioExp">
+
+	<label for="fechaFinExp">Fecha Fin</label>
+	<input type="text" id="fechaFinExp" name="fechaFinExp" [(ngModel)]="experienciaRichardNueva.fechaFinExp">
+
+	<label for="descripcionExp">Descripcion</label>
+	<input type="text" id="descripcionExp" name="descripcionExp" [(ngModel)]="experienciaRichardNueva.descripcionExp">
+
+	<label for="imagenExp">Imagen</label>
+<input type="text" id="imagenExp" name="imagenExp" [(ngModel)]="experienciaRichardNueva.imagenExp">
+
+        
+        <button class="btn btn-primary" (click)="agregarExperienciaRichard()">Guardar</button>
+   </form>
+</div>
+
