@@ -35,6 +35,9 @@ import { UserComponent } from './users/user/user.component';
 import { AdminComponent } from './users/admin/admin.component';
 import { EditarEducacionComponent } from './COMPONENTES/EDUCACION/editar-educacion/editar-educacion.component';
 
+import { InicioComponent } from './COMPONENTES/inicio/inicio.component';
+import { EditarComponent } from './COMPONENTES/editar/editar.component';
+import { AgregarComponent } from './COMPONENTES/agregar/agregar.component';
 
 
 
@@ -57,7 +60,10 @@ import { EditarEducacionComponent } from './COMPONENTES/EDUCACION/editar-educaci
     RegistroComponent,
     UserComponent,
     AdminComponent,
-    EditarEducacionComponent
+    EditarEducacionComponent,
+    EditarComponent,
+    AgregarComponent,
+    InicioComponent
   ],
 
 

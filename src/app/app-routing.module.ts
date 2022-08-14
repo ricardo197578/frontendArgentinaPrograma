@@ -18,12 +18,15 @@ import { AdminComponent } from './users/admin/admin.component';
 
 import { UserComponent } from './users/user/user.component';
 
+import { AgregarComponent } from './COMPONENTES/agregar/agregar.component';
+import { EditarComponent } from './COMPONENTES/editar/editar.component';
+
 const routes: Routes = [
 	{path:'porfolio',component:PorfolioComponent},
 //	{path:'iniciar-sesion',component:IniciarSesionComponent},
 	//rutas producto
-
-
+        {path:'editar/:id', component: EditarComponent},
+        {path:'agregar', component:AgregarComponent},
 //educacion
         {path:'nuevo-educacion', component:NuevoEducacionComponent,
 	 canActivate: [guard], data: { expectedRol: ['admin']}},
