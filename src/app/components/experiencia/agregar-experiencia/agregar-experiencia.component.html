@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <form action="">
+        <label for="empresa">Empresa</label>
+        <input type="text" id="empresa" name="empresa" [(ngModel)]="experienciaNueva.empresa">
+        <br>
+        <label for="fechaInicioExp">Fecha Inicio</label>
+        <input type="text" name="fechaInicioExp" id="fechaInicioExp" [(ngModel)]="experienciaNueva.fechaInicioExp">
+        <br>
+         <label for="fechaFinExp">Fecha Desvinculacion</label>
+        <input type="text" name="fechaFinExp" id="fechaFinExp" [(ngModel)]="experienciaNueva.fechaFinExp">
+        <br>
+        <label for="descripcionExp">Descripcion</label>
+        <input type="text" name="descripcionExp" id="descripcionExp" [(ngModel)]="experienciaNueva.descripcionExp">
+        <br>
+        <label for="imagenExp">Imagen</label>
+        <input type="text" name="imagenExp" id="imagenExp" [(ngModel)]="experienciaNueva.imagenExp">
+
+        <br>
+<button class="btn btn-primary" (click)="agregarExperiencia()">Guardar</button>
+    </form>
+    </div>
+

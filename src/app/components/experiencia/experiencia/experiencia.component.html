@@ -1,0 +1,30 @@
+<div class="container-fluid">
+        <h2>EXPERIENCIA</h2>
+    <button type="button"class="btn btn-primary" routerLink="/agregar-experiencia" *ngIf="isLogged">Agregar</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Empresa</th>
+                <th scope="col">Fecha Inicio</th>
+		<th scope="col">Fecha Fin</th>
+		<th scope="col">Descripcion</th>
+		<th scope="col">Imagen</th>              
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let experiencia of lista">
+                <td>{{experiencia.empresa}}</td>
+                <td>{{experiencia.fechaInicioExp}}</td>
+                <td>{{experiencia.fechaFinExp}}</td>
+		<td>{{experiencia.descripcionExp}}</td>
+		<td>{{experiencia.imagenExp}}</td>
+                <td *ngIf="isLogged">
+                    <button class="btn btn-danger" (click)="eliminar(experiencia.id)">Eliminar</button>
+                    <button class="btn btn-warning" routerLink="/editar-experiencia/{{experiencia.id}}"  >Modificar</button>
+		       </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,29 @@
+<div class="container-fluid">
+        <h2>EDUCACION</h2>
+    <button type="button"class="btn btn-primary" routerLink="/agregar-educacion" *ngIf="isLogged">Agregar Educación</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Titulo</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Descripcion</th>
+		<th scope="col">Imagen</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let educacion of lista">
+                <td>{{educacion.titulo}}</td>
+                <td>{{educacion.fecha}}</td>
+                <td>{{educacion.descripcion}}</td>
+		<td>{{educacion.imagen}}</td>
+                <td *ngIf="isLogged">
+                    <button class="btn btn-danger" (click)="eliminar(educacion.id)">Eliminar</button>
+                    <button class="btn btn-warning" routerLink="/editar-educacion/{{educacion.id}}"  >Modificar</button>
+             </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+

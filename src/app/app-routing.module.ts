@@ -1,53 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {PorfolioComponent} from './COMPONENTES/porfolio/porfolio.component';
-import {IniciarSesionComponent} from './COMPONENTES/iniciar-sesion/iniciar-sesion.component';
+import { LoginComponent } from './components/login/login.component';
 
+import { EditarComponent } from './components/inicio/editar/editar.component';
+import { AgregarComponent } from './components/inicio/agregar/agregar.component';
+import { HomeComponent } from './components/home/home.component';
 
-import { NuevoExperienciaComponent } from './COMPONENTES/EXPERIENCIA/nuevo-experiencia/nuevo-experiencia.component';
-import { NuevoEducacionComponent } from './COMPONENTES/EDUCACION/nuevo-educacion/nuevo-educacion.component'
-import { EditarExperienciaComponent } from './COMPONENTES/EXPERIENCIA/editar-experiencia/editar-experiencia.component';
-import { EditarEducacionComponent } from './COMPONENTES/EDUCACION/editar-educacion/editar-educacion.component';
-
-
-//import { LoginComponent } from './auth/login/login.component';
-
-import { GuardService as guard} from 'src/app/guards/guard.service';
-
-import { AdminComponent } from './users/admin/admin.component';
-
-import { UserComponent } from './users/user/user.component';
-
-import { AgregarComponent } from './COMPONENTES/agregar/agregar.component';
-import { EditarComponent } from './COMPONENTES/editar/editar.component';
+import { AgregarEducacionComponent } from './components/educacion/agregar-educacion/agregar-educacion.component';
+import { EditarEducacionComponent } from './components/educacion/editar-educacion/editar-educacion.component';
+import { AgregarExperienciaComponent } from './components/experiencia/agregar-experiencia/agregar-experiencia.component';
+import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia/editar-experiencia.component';
 
 const routes: Routes = [
-	{path:'porfolio',component:PorfolioComponent},
-//	{path:'iniciar-sesion',component:IniciarSesionComponent},
-	//rutas producto
-        {path:'editar/:id', component: EditarComponent},
-        {path:'agregar', component:AgregarComponent},
-//educacion
-        {path:'nuevo-educacion', component:NuevoEducacionComponent,
-	 canActivate: [guard], data: { expectedRol: ['admin']}},
+  { path:'login', component: LoginComponent},
+  { path:'editar/:id', component: EditarComponent},
+  { path:'agregar', component: AgregarComponent},
+  { path:'agregar-educacion', component: AgregarEducacionComponent },
+  { path:'editar-educacion/:id',component: EditarEducacionComponent},
+  { path:'agregar-experiencia',component:AgregarExperienciaComponent },
+  { path:'editar-experiencia/:id',component:EditarExperienciaComponent },
 
-	 {path:'editar-educacion', component:EditarEducacionComponent,
-         canActivate: [guard], data: { expectedRol: ['admin']}},
-//experiencia
-	{path:'nuevo-experiencia', component:NuevoExperienciaComponent,
-         canActivate: [guard], data: { expectedRol: ['admin']}},
-        {path:'editar-experiencia', component:EditarExperienciaComponent,
-	 canActivate: [guard], data: { expectedRol: ['admin']}},
-//rutas admin
-	{path: 'admin', component: AdminComponent, canActivate: [guard], data: {expectedRol: ['admin']}},
-         {path: 'user', component: AdminComponent, canActivate: [guard], data: {expectedRol: ['user']}},
+  { path:'', component: HomeComponent}
 
-//rutas login y registro
-       // {path:'login',component: LoginComponent},
-	 {path:'iniciar-sesion',component:IniciarSesionComponent},
-
-	{path:'',redirectTo:'porfolio',pathMatch:'full'}
-
+  
 ];
 
 @NgModule({

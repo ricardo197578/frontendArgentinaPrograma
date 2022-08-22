@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <form action="">
+        <label for="titulo">Titulo</label>
+        <input type="text" id="titulo" name="titulo" [(ngModel)]="educacionActual.titulo">
+        <br>
+        <label for="fecha">Fecha en que se recibio</label>
+        <input type="text" name="fecha" id="fecha" [(ngModel)]="educacionActual.fecha">
+        <br>
+        <label for="descripcion">Descripcion</label>
+        <input type="text" name="descripcion" id="descripcion" [(ngModel)]="educacionActual.descripcion">
+        <br>
+        <label for="imagen">Imagen de la institución</label>
+        <input type="imagen" name="imagen" id="imagen" [(ngModel)]="educacionActual.imagen">
+
+        <br>
+	<button class="btn btn-primary" (click)="guardad()">Guardar</button>
+
+    </form>
+    </div>
+
