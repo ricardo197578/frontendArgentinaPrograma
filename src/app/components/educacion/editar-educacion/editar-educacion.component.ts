@@ -29,7 +29,7 @@ export class EditarEducacionComponent implements OnInit {
   guardad(){
     this.educacionService.editEducacion(this.id, this.educacionActual).subscribe(
       res=>{
-        this.router.navigate(['/home']);
+        this.router.navigate(['/']);
       },
 
       err=>console.log(err)

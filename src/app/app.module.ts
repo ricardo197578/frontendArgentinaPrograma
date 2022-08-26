@@ -24,6 +24,7 @@ import { EditarEducacionComponent } from './components/educacion/editar-educacio
 import { BannerComponent } from './components/banner/banner.component';
 import { AgregarExperienciaComponent } from './components/experiencia/agregar-experiencia/agregar-experiencia.component';
 import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia/editar-experiencia.component';
+import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de/editar-acerca-de.component';
 
 
 
@@ -47,7 +48,8 @@ import { EditarExperienciaComponent } from './components/experiencia/editar-expe
     EditarEducacionComponent,
     BannerComponent,
     AgregarExperienciaComponent,
-    EditarExperienciaComponent
+    EditarExperienciaComponent,
+    EditarAcercaDeComponent
     
   ],
   imports: [

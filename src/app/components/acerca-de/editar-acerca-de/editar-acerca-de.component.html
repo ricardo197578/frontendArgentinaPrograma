@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <form action="">
+	 <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="personaActual.nombre">
+        <br>
+	<label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" [(ngModel)]="personaActual.apellido">
+        <br>
+        <label for="titulo">Titulo</label>
+        <input type="text" id="titulo" name="titulo" [(ngModel)]="personaActual.titulo">
+        <br>
+        <label for="descripcion">Descripcion</label>
+        <input type="text" name="descripcion" id="descripcion" [(ngModel)]="personaActual.descripcion">
+        <br>
+        <label for="imagen">Imagen </label>
+        <input type="imagen" name="imagen" id="imagen" [(ngModel)]="personaActual.imagen">
+
+        <br>
+        <button class="btn btn-primary" (click)="guardad()">Guardar</button>
+
+    </form>
+    </div>
+

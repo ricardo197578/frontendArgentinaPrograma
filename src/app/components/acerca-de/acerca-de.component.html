@@ -1,1 +1,41 @@
-<p>acerca-de works!</p>
+<div class="row">
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-8">
+        <img  src="./assets/richard.jpg"
+        class="img-fluid"
+        id="fotodeperfil">
+    </div>
+
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-8">
+
+   <span *ngFor="let persona of lista">
+           
+
+	   <p id="nombre">{{persona.nombre}}</p>
+	
+           <p>{{persona.apellido}}</p>
+	    <p>{{persona.titulo}}</p>
+ 
+
+ 
+
+	   <td *ngIf="isLogged">
+		   <button class="btn btn-warning" routerLink="editar-acerca-de/{{persona.id}}"  >Modificar</button>
+                </td>
+           
+       
+	    
+ 	</span>
+    </div>
+	<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+
+    
+	    <span *ngFor="let persona of lista">
+	     
+           <p>{{persona.descripcion}}</p>
+       
+
+	    </span>
+    
+    </div>
+</div>
+                     
