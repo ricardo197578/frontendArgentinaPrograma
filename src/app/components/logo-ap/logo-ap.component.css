@@ -2,6 +2,7 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
+   
     }
 
     .redes{
@@ -11,7 +12,7 @@
     border-width:medium;
     }
 
-    #logoAP{
+#logoAP{
         width:140px;
 
     }
@@ -25,10 +26,10 @@
      flex-direction:column;
     }
     
-  /*  .container{
+    .container{
     	  flex-direction:column;
 
-    }*/
+    }
     .redes{
         display:flex;
         flex-direction:column;

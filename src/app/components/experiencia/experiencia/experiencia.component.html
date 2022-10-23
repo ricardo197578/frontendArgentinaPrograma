@@ -1,7 +1,15 @@
 <div class="container-fluid">
-        <h2>EXPERIENCIA</h2>
+	
+		<h2>EXPERIENCIA</h2>
     <button type="button"class="btn btn-primary" routerLink="/agregar-experiencia" *ngIf="isLogged">Agregar</button>
-    <table class="table">
+    
+<div class="container mt-3">
+
+
+  <div class="table-responsive-sm">
+    <table class="table table-bordered">
+
+
         <thead>
             <tr>
                 <th scope="col">Empresa</th>
@@ -26,5 +34,7 @@
 
         </tbody>
     </table>
+	</div>
+</div>
 </div>
 

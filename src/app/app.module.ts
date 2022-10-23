@@ -17,7 +17,7 @@ import { LogoApComponent } from './components/logo-ap/logo-ap.component';
 import { EducacionComponent } from './components/educacion/educacion/educacion.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia/experiencia.component';
 import { FooterComponent } from './components/footer/footer/footer.component';
-import { HabilidadesComponent } from './components/habilidades/habilidades/habilidades.component';
+
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { AgregarEducacionComponent } from './components/educacion/agregar-educacion/agregar-educacion.component';
 import { EditarEducacionComponent } from './components/educacion/editar-educacion/editar-educacion.component';
@@ -25,6 +25,8 @@ import { BannerComponent } from './components/banner/banner.component';
 import { AgregarExperienciaComponent } from './components/experiencia/agregar-experiencia/agregar-experiencia.component';
 import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia/editar-experiencia.component';
 import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de/editar-acerca-de.component';
+import { SkillsComponent } from './components/skills/skills/skills.component';
+import { AgregarSkillsComponent } from './components/skills/agregar-skills/agregar-skills.component';
 
 
 
@@ -42,14 +44,15 @@ import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de
     EducacionComponent,
     ExperienciaComponent,
     FooterComponent,
-    HabilidadesComponent,
     AcercaDeComponent,
     AgregarEducacionComponent,
     EditarEducacionComponent,
     BannerComponent,
     AgregarExperienciaComponent,
     EditarExperienciaComponent,
-    EditarAcercaDeComponent
+    EditarAcercaDeComponent,
+    SkillsComponent,
+    AgregarSkillsComponent
     
   ],
   imports: [
