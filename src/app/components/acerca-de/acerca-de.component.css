@@ -24,17 +24,17 @@
           width:15%;
           border-radius:100%;
           box-shadow:3px 3px 3px grey;
-          left:1%;
-          top:600px;
+          left:44%;
+          top:480px;
       }
     }
     @media (max-width:576px){
      #fotodeperfil{
         position:absolute;
-        width:40%;
+        width:27%;
         border-radius:100%;
         box-shadow:3px 3px 3px grey;
-            left:30%;
+            left:38%;
             top:700px;
         }
    }

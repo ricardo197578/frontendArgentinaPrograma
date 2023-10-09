@@ -1,4 +1,4 @@
-<div class="container">
+<!--div class="container">
   <div class="row">
     <div class="col-md-6 logo d-flex align-items-center justify-content-center">
       <img src="./assets/APLogo.png" alt="Logo" id="logoAP">
@@ -17,6 +17,27 @@
       </div>
     </div>
   </div>
-</div>
+</div-->
 
-  
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="logo d-flex align-items-center">
+        <img src="./assets/APLogo.png" alt="Logo" id="logoAP">
+      </div>
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-end">
+      <div class="redes">
+        <a href="#"><img src="./assets/linkedin.png" alt="LinkedIn"></a>
+        <a href="#"><img src="./assets/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="./assets/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="./assets/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="./assets/github.png" alt="GitHub"></a>
+      </div>
+      <div class="buttons ml-3">
+        <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">LOGIN</button>
+        <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">LOGOUT</button>
+      </div>
+    </div>
+  </div>
+</div>
