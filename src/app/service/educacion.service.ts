@@ -7,21 +7,21 @@ import { Observable } from 'rxjs';
 })
 export class EducacionService {
 
-  url='https://richard2022.herokuapp.com/api/educacion';
+  url='http://localhost:8080/api';
   constructor(private http: HttpClient) { }
 
   getEducaciones():Observable<any>
   {
-    return this.http.get(this.url);
+    return this.http.get(this.url+'/educacion');
   }
 
   getUnaEducacion(id: string):Observable<any>
   {
-    return this.http.get(this.url+'/'+id);
+    return this.http.get(this.url+'/educacion'+id);
   }
  saveEducacion(educacion: Educacion):Observable<any>
   {
-    return this.http.post(this.url, educacion);
+    return this.http.post(this.url+'/guardar', educacion);
   }
 
   editEducacion(id:string, educacion: Educacion):Observable<any>
@@ -31,7 +31,7 @@ export class EducacionService {
 
   deleteEducacion(id:string):Observable<any>
   {
-    return this.http.delete(this.url+'/'+id);
+    return this.http.delete(this.url+'/eliminar/'+id);
   }
 }
   export interface Educacion{

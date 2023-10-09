@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion, EducacionService } from 'src/app/service/educacion.service';
 
 
@@ -12,7 +12,9 @@ export class AgregarEducacionComponent implements OnInit {
 
   educacionNueva: Educacion={id:'',titulo:'',fecha:'',descripcion:'',imagen:''};
 
-  constructor(private educacionService: EducacionService, private router:Router) { }
+  constructor(private educacionService: EducacionService,
+	      private antivateRouter: ActivatedRoute,
+	      private router:Router) { }
 
   ngOnInit(): void {
 
@@ -23,6 +25,7 @@ export class AgregarEducacionComponent implements OnInit {
       res=>{
         console.log(res);
   this.router.navigate(['/']);
+
 
       },
       err=>console.log(err)

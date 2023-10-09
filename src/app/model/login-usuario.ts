@@ -3,7 +3,7 @@ export class LoginUsuario {
     password: string;
 
     constructor(nombreUsuario: string, password: string){
-        this.nombreUsuario = nombreUsuario
+        this.nombreUsuario = nombreUsuario;
         this.password = password;
     }
 }

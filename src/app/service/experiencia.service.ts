@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ExperienciaService {
 
-  url='https://richard2022.herokuapp.com/api/experiencia';
+  url='https://localhost:8080/api/experiencia';
   constructor(private http: HttpClient) { }
 
   getExperiencias():Observable<any>
